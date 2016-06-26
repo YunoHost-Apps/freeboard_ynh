@@ -38,8 +38,8 @@ sudo mkdir -p $src_path
 sudo git clone https://github.com/Freeboard/freeboard.git $src_path
 
 if [[ $is_public -eq 1 ]]; then
-  mv "$src_path"/index.html "$src_path"/index.html.bak
-  mv "$src_path"/index-dev.html "$src_path"/index.html
+  sudo mv "$src_path"/index.html "$src_path"/index.html.bak
+  sudo mv "$src_path"/index-dev.html "$src_path"/index.html
 fi
 
 # Set permissions to app files
