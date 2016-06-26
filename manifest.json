@@ -1,6 +1,6 @@
 {
-    "name": "Laverna",
-    "id": "laverna",
+    "name": "Freeboard",
+    "id": "freeboard",
     "packaging_format": 1,
     "description": {
         "en": "Laverna is a JavaScript note taking application with Markdown editor and encryption support. Consider it like open source alternative to Evernote.",
