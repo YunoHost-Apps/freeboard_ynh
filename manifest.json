@@ -53,6 +53,15 @@
                 "example": "johndoe"
             },
             {
+                "name": "adv_html",
+                "type": "boolean",
+                "ask": {
+                    "en": "Use dev Html ? (Permanent dashboard, more plugins...)",
+                    "fr": "Utilisé l'Html développeur ? (Dashboard permanent, plus de plugins..."
+                },
+                "default": false
+            },
+            {
                 "name": "is_public",
                 "type": "boolean",
                 "ask": {
