@@ -41,7 +41,7 @@
                     "fr": "Choisissez un chemin pour Laverna"
                 },
                 "example": "/laverna",
-                "default": "/laverna"
+                "default": "/freeboard"
             },
             {
                 "name": "admin",
@@ -59,7 +59,7 @@
                     "en": "Use dev Html ? (Permanent dashboard, more plugins...)",
                     "fr": "Utilisé l'Html développeur ? (Dashboard permanent, plus de plugins..."
                 },
-                "default": false
+                "default": true
             },
             {
                 "name": "dash_bool",
@@ -68,7 +68,7 @@
                     "en": "Use permanent dashboard ? (Requires dev html)",
                     "fr": "Utilisé un dashoard permanent ? (Dev Html requis)"
                 },
-                "default": false
+                "default": true
             },
             {
                 "name": "dash",
