@@ -49,7 +49,7 @@ fi
 if [[ $dash_bool -eq 1 ]] && [[ $adv_html -eq 1 ]]; then
   string='"'
   sudo sed -i "461s/.*/\            var freeboardLocation = "$string${dash}"$string;/" "$src_path"/lib/js/freeboard/freeboard.js
-  sudo sed -i 's/var freeboardLocation = getParameterByName("load");///var freeboardLocation = getParameterByName("load");/g' "$src_path"/lib/js/freeboard/freeboard.js
+  sudo sed -i '/var freeboardLocation = getParameterByName("load");///var freeboardLocation = getParameterByName("load");/g' "$src_path"/lib/js/freeboard/freeboard.js
 fi
 
 # Set permissions to app files
