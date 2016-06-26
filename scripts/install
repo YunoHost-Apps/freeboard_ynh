@@ -19,6 +19,7 @@ domain=$YNH_APP_ARG_DOMAIN
 path=$YNH_APP_ARG_PATH
 admin=$YNH_APP_ARG_ADMIN
 is_public=$YNH_APP_ARG_IS_PUBLIC
+adv_html=$YNH_APP_ARG_ADV_HTML
 
 # Source YunoHost helpers
 source /usr/share/yunohost/helpers
@@ -31,10 +32,15 @@ ynh_app_setting_set "$app" is_public "$is_public"
 sudo yunohost app checkurl "${domain}${path}" -a "$app" \
     || ynh_die "Path not available: ${domain}${path}"
 
-# Copy source files
+# Download and edit Freeboard files
 src_path=/var/www/$app
 sudo mkdir -p $src_path
 sudo git clone https://github.com/Freeboard/freeboard.git $src_path
+
+if [[ $is_public -eq 1 ]]; then
+  mv "$src_path"/index.html "$src_path"/index.html.bak
+  mv "$src_path"/index-dev.html "$src_path"/index.html
+fi
 
 # Set permissions to app files
 sudo chown -R root: $src_path
