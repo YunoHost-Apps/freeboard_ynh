@@ -34,7 +34,7 @@ sudo yunohost app checkurl "${domain}${path}" -a "$app" \
 # Copy source files
 src_path=/var/www/$app
 sudo mkdir -p $src_path
-sudo git clone https://github.com/Freeboard/freeboard.git
+sudo git clone https://github.com/Freeboard/freeboard.git $src_path
 
 # Set permissions to app files
 sudo chown -R root: $src_path
