@@ -62,6 +62,23 @@
                 "default": false
             },
             {
+                "name": "dash_bool",
+                "type": "boolean",
+                "ask": {
+                    "en": "Use permanent dashboard ? (Requires dev html)",
+                    "fr": "Utilisé un dashoard permanent ? (Dev Html requis)"
+                },
+                "default": false
+            },
+            {
+                "name": "dash",
+                "ask": {
+                    "en": "Permanent dashboard name, put it in /var/www/your_dashboard/",
+                    "fr": "Dashboard permanent, à placer dand /var/www/votre_dashboard/"
+                },
+                "example": "dashboard.json"
+            },
+            {
                 "name": "is_public",
                 "type": "boolean",
                 "ask": {
