@@ -46,7 +46,7 @@ if [[ $adv_html -eq 1 ]]; then
 fi
 
 # Permanent dashboard
-new_string=			var freeboardLocation = "$dash";
+new_string='			var freeboardLocation = $dash;'
 echo $new_string
 if [[ $dash_bool -eq 1 ]] && [[ $adv_html -eq 1 ]]; then
   sudo sed -i "461s/.*/${new_string}/" "$src_path"/lib/js/freeboard/freeboard.js
