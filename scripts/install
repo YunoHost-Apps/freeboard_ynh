@@ -20,6 +20,7 @@ path=$YNH_APP_ARG_PATH
 admin=$YNH_APP_ARG_ADMIN
 is_public=$YNH_APP_ARG_IS_PUBLIC
 adv_html=$YNH_APP_ARG_ADV_HTML
+dashboard=$YNH_APP_ARG_DASHBOARD
 
 # Source YunoHost helpers
 source /usr/share/yunohost/helpers
@@ -37,10 +38,14 @@ src_path=/var/www/$app
 sudo mkdir -p $src_path
 sudo git clone https://github.com/Freeboard/freeboard.git $src_path
 
+# Replacing default html by dev html
 if [[ $is_public -eq 1 ]]; then
   sudo mv "$src_path"/index.html "$src_path"/index.html.bak
   sudo mv "$src_path"/index-dev.html "$src_path"/index.html
 fi
+
+# Permanent dashboard
+sed -i '461s/.*/			var freeboardLocation = "$DASHBOARD";/' "$src_path"/lib/js/freeboard/freeboard.js
 
 # Set permissions to app files
 sudo chown -R root: $src_path
