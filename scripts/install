@@ -47,7 +47,8 @@ fi
 
 # Permanent dashboard
 if [[ $dash_bool -eq 1 ]] && [[ $adv_html -eq 1 ]]; then
-sed -i '461s/.*/			var freeboardLocation = "$dash" ;/' "$src_path"/lib/js/freeboard/freeboard.js
+  sed -i '461s/.*/			var freeboardLocation = "$dash" ;/' "$src_path"/lib/js/freeboard/freeboard.js
+fi
 
 # Set permissions to app files
 sudo chown -R root: $src_path
