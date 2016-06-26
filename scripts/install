@@ -49,7 +49,7 @@ fi
 if [[ $dash_bool -eq 1 ]] && [[ $adv_html -eq 1 ]]; then
   string='"'
   sudo sed -i "460s/.*/\            var freeboardLocation = "$string${dash}"$string;/" "$src_path"/lib/js/freeboard/freeboard.js
-  sudo perl -pie 's/div id="board-content"/div id="board-content" style="top: 20px;/g' "$src_path"/lib/js/freeboard/freeboard.js > "$src_path"/lib/js/freeboard/freeboard.js
+  sudo perl -pie 's/div id="board-content"/div id="board-content" style="top: 20px;/g' "$src_path"/lib/js/freeboard/freeboard.js
 fi
 
 # Set permissions to app files
