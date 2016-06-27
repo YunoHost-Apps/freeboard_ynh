@@ -3,15 +3,15 @@
     "id": "freeboard",
     "packaging_format": 1,
     "description": {
-        "en": "Laverna is a JavaScript note taking application with Markdown editor and encryption support. Consider it like open source alternative to Evernote.",
+        "en": "A damn-sexy, open source real-time dashboard builder for IOT and other web mashups. A free open-source alternative to Geckoboard.",
         "fr": "Laverna is a JavaScript note taking application with Markdown editor and encryption support. Consider it like open source alternative to Evernote."
     },
-    "url": "https://laverna.cc/index.html",
+    "url": "https://http://freeboard.io/",
     "license": "free",
     "maintainer": {
         "name": "Alex",
         "email": "apulido@free.fr",
-        "url": "https://github.com/likeitneverwentaway/laverna_ynh"
+        "url": "https://github.com/Yunohost-Apps/freeboard_ynh"
     },
     "requirements": {
         "yunohost": ">> 2.4.0"
@@ -28,8 +28,8 @@
                 "name": "domain",
 		"type": "domain",
                 "ask": {
-                    "en": "Choose a domain name for Laverna",
-                    "fr": "Choisissez un nom de domaine pour Laverna"
+                    "en": "Choose a domain name for your dashboard",
+                    "fr": "Choisissez un nom de domaine pour votre dashboard"
                 },
                 "example": "example.com"
             },
@@ -37,11 +37,11 @@
                 "name": "path",
 		"type": "path",
                 "ask": {
-                    "en": "Choose a path for Laverna",
-                    "fr": "Choisissez un chemin pour Laverna"
+                    "en": "Choose a path for your dashboard",
+                    "fr": "Choisissez un chemin pour votre dashboard"
                 },
-                "example": "/laverna",
-                "default": "/freeboard"
+                "example": "/dashboard",
+                "default": "/dashboard"
             },
             {
                 "name": "admin",
@@ -57,9 +57,9 @@
                 "type": "boolean",
                 "ask": {
                     "en": "Use dev Html ? (Permanent dashboard, more plugins...)",
-                    "fr": "Utilisé l'Html développeur ? (Dashboard permanent, plus de plugins..."
+                    "fr": "Utilisé l'Html développeur ? (Dashboard permanent, plus de plugins...)"
                 },
-                "default": true
+                "default": false
             },
             {
                 "name": "dash_bool",
@@ -68,7 +68,7 @@
                     "en": "Use permanent dashboard ? (Requires dev html)",
                     "fr": "Utilisé un dashoard permanent ? (Dev Html requis)"
                 },
-                "default": true
+                "default": false
             },
             {
                 "name": "dash",
